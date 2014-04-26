@@ -30,18 +30,18 @@
 * add descriptive name to the activity columns
 * append the activity code and name the the merged data frame
 
-###writes out tidy data set * 1 to file tidyDataSet1.txt in csv format
+###writes out tidy data set  1 to file tidyDataSet1.txt in csv format
 
 
-##create tidy data set *  2
+##create tidy data set 2
 
 ###slice tidyDataSet 1 by activity and subject
-### split tidyDatSet1 by activity
+* split tidyDatSet1 by activity
 * for each activity in tidyDataSet1
-###   split by subject
+*   split by subject
 *   for each subject compute variable means
 *      add descriptive name to the column
 *      add row to tidyDataSet2
 ##add descriptive variable column to tidyDataSet2
 
-###writes out tidy data set * 1 to file tidyDataSet2.txt in csv format
+###writes out tidy data set 1 to file tidyDataSet2.txt in csv format

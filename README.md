@@ -44,4 +44,4 @@
 *      add row to tidyDataSet2
 * add descriptive variable column to tidyDataSet2
 
-###writes out tidy data set 1 to file tidyDataSet2.txt in csv format
+###writes out tidy data set 2 to file tidyDataSet2.txt in csv format

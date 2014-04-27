@@ -62,16 +62,14 @@ for(i in activityCode){
   df <- data.frame(activity[i])
   activityBySubject <- split(df, as.factor(df[,3]))
   for(j in 1:length(activityBySubject)){
-     subName <- names(activityBySubject[j])
-     rowName <- paste(actName, "subject", subName, sep="-")
-     outRow <- lapply(activityBySubject[j], function(x) colMeans(data.frame(x)[, 1:length(meanStdColNumber) + 3]))
-     names(outRow) <- rowName
-     tidyDataSet2 <- append(tidyDataSet2,outRow)
+    subName <- names(activityBySubject[j])
+    rowName <- paste(actName, subName, sep=".")
+    outRow <- lapply(activityBySubject[j], function(x) colMeans(data.frame(x)[, 1:length(meanStdColNumber) + 3]))
+    names(outRow) <- rowName
+    tidyDataSet2 <- append(tidyDataSet2,outRow)
   }
 }
 tidyDataFrame2 <- data.frame(tidyDataSet2)
 row.names(tidyDataFrame2) <- meanStdColNames
-Average <- meanStdColNames
-tidyDataFrame2 <-cbind(Average, tidyDataFrame2 )
 #writes out tidy data set #2
-write.csv(tidyDataFrame2, file="tidyDataSet2.txt" , row.names = F)
+write.csv(t(tidyDataFrame2), file="tidyDataSet2.txt" , row.names = T)
